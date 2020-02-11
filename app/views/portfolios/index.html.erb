@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Projects</h1>
+<% @portfolio_items.each do |project| %>
+  <p /><%= project.title %>
+  <p /><%= project.substitle %>
+  <p /><%= project.body %>
+  <p /><%= image_tag project.thumbnail %>
+<% end %>

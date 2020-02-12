@@ -1,0 +1,19 @@
+<h1>Show project</h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @portfolio_item.title %>
+</p>
+
+<p>
+  <strong>Subtitle:</strong>
+  <em><%= @portfolio_item.subtitle %></em>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @portfolio_item.body %>
+</p>
+
+<%= link_to 'Back', portfolios_path %>

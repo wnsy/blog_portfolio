@@ -49,7 +49,7 @@ puts "5 books on current reading list created"
 9.times do |item|
   Portfolio.create!(
   title: "Project #{item}",
-  substitle: "description #{item}",
+  subtitle: "description #{item}",
   body: "Cat ipsum dolor sit amet, present belly, scratch hand when stroked.
   Sniff catnip and act crazy sit on human and sleep everywhere, but not in
   my bed yet i vomit in the bed in the middle of the night. Human clearly uses

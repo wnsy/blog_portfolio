@@ -1,9 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to 'New project item', new_portfolio_path %>
+
 <h1>Projects</h1>
 <% @portfolio_items.each do |project| %>
-  <p /><%= project.title %>
-  <p /><%= project.substitle %>
+  <p /><%= link_to project.title, portfolio_path(project) %>
+  <p /><%= project.subtitle %>
   <p /><%= project.body %>
   <p /><%= image_tag project.thumbnail unless project.thumbnail.nil? %>
+  <%= link_to 'Edit', edit_portfolio_path(project) %>
 <% end %>

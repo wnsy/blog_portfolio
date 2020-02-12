@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio, only: [:edit, :update]
+  before_action :set_portfolio, only: [:edit, :update, :show]
 
   def index
     @portfolio_items = Portfolio.all
@@ -33,6 +33,9 @@ class PortfoliosController < ApplicationController
     end
   end
 
+  def show
+  end
+
   private
   def set_portfolio
     @portfolio_item = Portfolio.find(params[:id])
@@ -40,7 +43,7 @@ class PortfoliosController < ApplicationController
 
   # to allow attrs/whitelisting
   def portfolio_params
-    params.require(:portfolio).permit(:title, :substitle, :body)
+    params.require(:portfolio).permit(:title, :subtitle, :body)
   end
 
 end

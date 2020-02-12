@@ -4,7 +4,7 @@
 
 <h1>Projects</h1>
 <% @portfolio_items.each do |project| %>
-  <p /><%= link_to project.title, portfolio_path(project) %>
+  <p /><%= link_to project.title, portfolio_show_path(project) %>
   <p /><%= project.subtitle %>
   <p /><%= project.body %>
   <p /><%= image_tag project.thumbnail unless project.thumbnail.nil? %>

@@ -9,4 +9,5 @@
   <p /><%= project.body %>
   <p /><%= image_tag project.thumbnail unless project.thumbnail.nil? %>
   <%= link_to 'Edit', edit_portfolio_path(project) %>
+  <%= link_to 'Delete project', project, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>

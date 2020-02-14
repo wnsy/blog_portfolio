@@ -86,3 +86,12 @@ Portfolio.create!(
 )
 
 puts "9 portfolio grid examples created"
+
+3.times do |tech|
+  Technology.create!(
+    name: "Tech used: #{tech}",
+    portfolio_id: Portfolio.last.id,
+  )
+end
+
+puts "3 technologies/types created"

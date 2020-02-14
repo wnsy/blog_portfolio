@@ -15,6 +15,8 @@ class PortfoliosController < ApplicationController
 
   def new
     @portfolio_item = Portfolio.new
+    # refactor later w/ JS to add another item check box/similar feature:
+    3.times { @portfolio_item.technologies.build }
   end
 
   def create
@@ -58,7 +60,7 @@ class PortfoliosController < ApplicationController
 
   # to allow attrs/whitelisting
   def portfolio_params
-    params.require(:portfolio).permit(:title, :subtitle, :body)
+    params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name])
   end
 
 end

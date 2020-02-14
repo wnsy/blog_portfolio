@@ -6,6 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+3.times do |category|
+  Category.create!(
+    title: "Category #{category}"
+  )
+end
+
+puts "3 categories created"
+
 10.times do |blog_post|
   Blog.create!(
     title: "Entry post #{blog_post}",
@@ -31,6 +39,7 @@
     Cats making all the muffins. With tail in the air my cat stared at me he was sipping his tea,
     too yet i like cats because they are fat and fluffy or my water bowl is clean and freshly replenished,
     so i'll drink from the toilet for meowwww for grab pompom in mouth and put in water dish meow and walk away.",
+    category_id: Category.last.id
   )
 end
 
@@ -46,10 +55,10 @@ end
 
 puts "5 books on current reading list created"
 
-9.times do |item|
+8.times do |item|
   Portfolio.create!(
   title: "Project #{item}",
-  subtitle: "description #{item}",
+  subtitle: "Rails",
   body: "Cat ipsum dolor sit amet, present belly, scratch hand when stroked.
   Sniff catnip and act crazy sit on human and sleep everywhere, but not in
   my bed yet i vomit in the bed in the middle of the night. Human clearly uses
@@ -61,5 +70,19 @@ puts "5 books on current reading list created"
   thumbnail: "http://placehold.it/350x200",
   )
 end
+
+Portfolio.create!(
+  title: "Project",
+  subtitle: "React",
+  body: "Cat ipsum dolor sit amet, present belly, scratch hand when stroked.
+  Sniff catnip and act crazy sit on human and sleep everywhere, but not in
+  my bed yet i vomit in the bed in the middle of the night. Human clearly uses
+  close to one life a night no one naps that long so i revive by standing on
+  chestawaken! purrrrrr, fall over dead (not really but gets sypathy). Sun bathe crash
+  against wall but walk away like nothing happened and love blinks and purr purr purr purr
+  yawn and run in circles. Nap all day enslave the hooman play riveting piece on synthesizer keyboard.",
+  main_image: "http://placehold.it/600x400",
+  thumbnail: "http://placehold.it/350x200",
+)
 
 puts "9 portfolio grid examples created"

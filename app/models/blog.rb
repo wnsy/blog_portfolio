@@ -1,6 +1,5 @@
 class Blog < ApplicationRecord
   extend FriendlyId
-  has_many :books, :portfolios
   belongs_to :category
   friendly_id :title, use: :slugged
 

@@ -56,3 +56,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # FriendlyId is the "Swiss Army bulldozer" of slugging and permalink plugins for Active Record
 gem 'friendly_id', '~> 5.2.4'
+
+# authentication
+gem 'devise', '~> 4.2'

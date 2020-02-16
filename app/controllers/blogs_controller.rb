@@ -1,6 +1,7 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :change_status]
-
+  layout "blog"
+  
   # GET /blogs
   # GET /blogs.json
   def index
@@ -12,6 +13,7 @@ class BlogsController < ApplicationController
   # GET /blogs/1.json
   def show
     @page_title = @blog.title
+    @seo_keywords = @blog.body
   end
 
   # GET /blogs/new

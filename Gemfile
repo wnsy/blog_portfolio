@@ -59,3 +59,11 @@ gem 'friendly_id', '~> 5.2.4'
 
 # authentication
 gem 'devise', '~> 4.2'
+
+# layout
+gem 'bootstrap', '~> 4.4', '>= 4.4.1'
+# bootstrap js dependency
+gem 'jquery-rails'
+
+# using own created gem to generate HTML copyright message
+gem 'otherside_copyright_tool', git: 'https://github.com/wnsy/otherside_copyright_tool'

@@ -15,4 +15,8 @@ module ApplicationHelper
       content_tag(:p, message, class: 'source-message')
     end
   end
+
+  def copyright_generator_helper
+    OthersideCopyrightTool::Render.copyright 'Other-Side.net', 'All rights reserved'
+  end
 end

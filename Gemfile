@@ -59,3 +59,8 @@ gem 'friendly_id', '~> 5.2.4'
 
 # authentication
 gem 'devise', '~> 4.2'
+
+# layout
+gem 'bootstrap', '~> 4.4', '>= 4.4.1'
+# bootstrap js dependency
+gem 'jquery-rails'

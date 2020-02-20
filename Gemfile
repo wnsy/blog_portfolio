@@ -67,3 +67,6 @@ gem 'jquery-rails'
 
 # using own created gem to generate HTML copyright message
 gem 'otherside_copyright_tool', git: 'https://github.com/wnsy/otherside_copyright_tool'
+
+# authorisation
+gem 'petergate', '~> 2.0', '>= 2.0.1'

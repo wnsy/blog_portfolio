@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'New project item', new_portfolio_path %>
+<%= link_to 'New project item', new_portfolio_path if logged_in?(:admin) %>
 
 <h1>Projects</h1>
 <%= render partial: 'portfolio_item', collection: @portfolio_items %>

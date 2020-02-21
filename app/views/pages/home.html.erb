@@ -1,15 +1,17 @@
 <!-- <h1>Hi, <%= current_user.first_name %></h1> -->
   <main role="main" class="inner cover">
-    <h1 class="cover-heading">Cover your page.</h1>
-    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+    <h1 class="cover-heading">Hello there!</h1>
     <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+      I love bubble tea and coffee (do not ask me to choose between them because why not both?).
+      I smash bugs (not the real ones, but gotcha)
+      and create a world of infinite possibilities with coding.
+      To see my projects (portfolio) in the past, head over to the linked section
+      above. I aim to publish a blog entry every Friday (because it's Friyay) :)
+      How did I end up here in the world wide web? Head over to the big button below.
+      <br />Signing off,
+      <br />-A
+    </p>
+    <p class="lead">
+      <%= link_to "About", about_path, class: "btn btn-lg btn-secondary" %>
     </p>
   </main>
-
-  <footer class="mastfoot mt-auto">
-    <div class="inner">
-      <p><%= copyright_generator_helper %></p>
-    </div>
-    <%= session_source_helper %>
-  </footer>

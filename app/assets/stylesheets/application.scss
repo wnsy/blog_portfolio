@@ -52,6 +52,7 @@ body {
  */
 .masthead {
   margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .masthead-brand {
@@ -107,4 +108,17 @@ body {
  */
 .mastfoot {
   color: rgba(255, 255, 255, .5);
+}
+
+
+/*
+ * Card / other custom styles
+ */
+.card-body {
+  color: black;
+  text-align: left;
+}
+
+.link-to-styles, a {
+  color: black;
 }

@@ -37,7 +37,6 @@ class PortfoliosController < ApplicationController
   end
 
   def update
-    binding.pry
     respond_to do |format|
       if @portfolio_item.update(portfolio_params)
         format.html {redirect_to portfolios_path, notice: 'Project item was successfully updated.' }

@@ -1,6 +1,9 @@
-<h1>Editing Blog</h1>
+<div class="blog-post">  
 
-<%= render 'form', blog: @blog if logged_in?(:admin) %>
+  <h1>Editing <%= @blog.title %></h1>
 
-<%= link_to 'Show', @blog %> |
-<%= link_to 'Back', blogs_path %>
+  <%= render 'form', blog: @blog if logged_in?(:admin) %>
+
+  <%= link_to 'Show', @blog %> |
+  <%= link_to 'Back', blogs_path %>
+</div>

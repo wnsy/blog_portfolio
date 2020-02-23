@@ -70,3 +70,9 @@ gem 'otherside_copyright_tool', git: 'https://github.com/wnsy/otherside_copyrigh
 
 # authorisation
 gem 'petergate', '~> 2.0', '>= 2.0.1'
+
+# font awesome
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
+
+# pagination
+gem 'kaminari', '~> 1.2'

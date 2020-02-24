@@ -31,7 +31,7 @@
 
     <main role="main">
 
-      <%= render 'shared/portfolio_jumbotron.html.erb' %>
+      <%= render 'shared/portfolio_jumbotron.html.erb' unless logged_in?(:admin) %>
 
       <%= yield %>
 

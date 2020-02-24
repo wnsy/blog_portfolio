@@ -1,3 +1,4 @@
-<h1>Create a new project item</h1>
-
-<%= render 'form', portfolio: @portfolio_item if logged_in?(:admin) %>
+<div class="container portfolio-padding">
+  <h1>Create a new project item</h1>
+  <%= render 'form', portfolio: @portfolio_item if logged_in?(:admin) %>
+</div>

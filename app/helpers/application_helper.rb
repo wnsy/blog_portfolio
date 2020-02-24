@@ -20,4 +20,46 @@ module ApplicationHelper
   def copyright_generator_helper
     OthersideCopyrightTool::Render.copyright 'Other-Side.net', 'All rights reserved'
   end
+
+  # refactoring nav links in the partial files so that this method
+  # returns an array of hashes that contain they syle class and tag types,
+  # while also checking for if it's on the current page to add 'active' style css
+  def nav_items
+    [
+      {
+        url: root_path,
+        title: 'Home'
+      },
+      {
+        url: about_path,
+        title: 'About'
+      },
+      {
+        url: contact_path,
+        title: 'Contact'
+      },
+      {
+        url: blogs_path,
+        title: 'Blog'
+      },
+      {
+        url: portfolios_path,
+        title: 'Portfolio'
+      },
+    ]
+  end
+
+  def nav_helper style, tag_type
+    links = ''
+
+    nav_items.each do |item|
+      links<<"<#{tag_type}><a href='#{item[:url]}' class='#{style} #{active? item[:url]}'>#{item[:title]}</a></#{tag_type}>"
+    end
+
+    links.html_safe
+  end
+
+  def active? path
+    "active" if current_page? path
+  end
 end

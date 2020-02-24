@@ -1,12 +1,13 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :change_status]
-  access all: [:show, :index], user: {except: [:destroy, :new, :edit, :create, :update]}, admin: :all
+  access all: [:show, :index], user: {except: [:destroy, :new, :edit, :create, :update, :change_status]}, admin: :all
   layout "blog"
 
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
+    # kaminari/pagination gem
+    @blogs = Blog.page(params[:page]).per(5)
     @page_title = "Other-side.net | Blog"
   end
 
@@ -85,6 +86,6 @@ class BlogsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def blog_params
-      params.require(:blog).permit(:title, :body)
+      params.require(:blog).permit(:title, :body, :categories)
     end
 end

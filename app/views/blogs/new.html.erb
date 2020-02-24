@@ -1,5 +1,9 @@
+<div class="blog-post">
+
 <h1>New Blog</h1>
 
 <%= render 'form', blog: @blog if logged_in?(:admin) %>
 
 <%= link_to 'Back', blogs_path %>
+
+</div>

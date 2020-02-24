@@ -1,0 +1,10 @@
+<footer class="text-muted">
+  <div class="container">
+    <p class="float-right">
+      <%= link_to 'View all portfolios', portfolios_path unless action_name == 'index' %>
+      <%= " / ".html_safe unless action_name == 'index' %>
+      <a href="#">Back to top</a>
+    </p>
+    <p><%= copyright_generator_helper %></p>
+  </div>
+</footer>

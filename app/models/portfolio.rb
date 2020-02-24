@@ -10,6 +10,7 @@ class Portfolio < ApplicationRecord
 
   scope :rails, -> { (where(subtitle: 'Rails')) }
   scope :react, -> { (where(subtitle: 'React')) }
+  scope :by_position, -> { (order("position ASC")) }
 
   def set_defaults
     self.main_image ||= Placeholder.image_generator(height: '600', width: '400')

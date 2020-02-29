@@ -16,6 +16,14 @@ class PortfoliosController < ApplicationController
     @rails_items = Portfolio.rails
   end
 
+  def sort
+    params[:order].each do |key, value|
+      Portfolio.find(value[:id]).update(position: value[:position])
+    end
+
+    render body: nil #bypass render No template found, we don't need a view
+  end
+
   def new
     @portfolio_item = Portfolio.new
     # refactor later w/ JS to add another item check box/similar feature:

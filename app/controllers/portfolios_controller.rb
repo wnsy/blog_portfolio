@@ -1,11 +1,11 @@
 class PortfoliosController < ApplicationController
   before_action :set_portfolio, only: [:edit, :update, :show, :destroy]
-  access all: [:show, :index, :react, :rails], user: {except: [:destroy, :new, :edit, :create, :update]}, admin: :all
+  access all: [:show, :index, :react, :rails], user: {except: [:destroy, :new, :edit, :create, :update, :sort]}, admin: :all
 
   layout "portfolio"
 
   def index
-    @portfolio_items = Portfolio.all
+    @portfolio_items = Portfolio.by_position
   end
 
   def react
@@ -14,6 +14,14 @@ class PortfoliosController < ApplicationController
 
   def rails
     @rails_items = Portfolio.rails
+  end
+
+  def sort
+    params[:order].each do |key, value|
+      Portfolio.find(value[:id]).update(position: value[:position])
+    end
+
+    render body: nil #bypass render No template found, we don't need a view
   end
 
   def new

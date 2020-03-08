@@ -79,3 +79,8 @@ gem 'kaminari', '~> 1.2'
 
 # for drop & drag sortable portfolio section
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+
+gem 'dotenv-rails', '~> 2.7', '>= 2.7.5'
+gem 'mini_magick', '~> 4.10', '>= 4.10.1'
+gem 'carrierwave', '~> 1.0'
+gem 'carrierwave-aws', '~> 1.4'

@@ -12,6 +12,9 @@ class Portfolio < ApplicationRecord
   scope :react, -> { (where(subtitle: 'React')) }
   scope :by_position, -> { (order("position ASC")) }
 
+  mount_uploader :thumbnail, PortfolioUploader
+  mount_uploader :main_image, PortfolioUploader
+
   def set_defaults
     self.main_image ||= Placeholder.image_generator(height: '600', width: '400')
     self.thumbnail ||= Placeholder.image_generator(height: '350', width: '200')

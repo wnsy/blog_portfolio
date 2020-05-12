@@ -71,7 +71,7 @@ class PortfoliosController < ApplicationController
 
   # to allow attrs/whitelisting
   def portfolio_params
-    params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name])
+    params.require(:portfolio).permit(:title, :subtitle, :thumbnail, :main_image, :body, technologies_attributes: [:name])
   end
 
 end

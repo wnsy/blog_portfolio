@@ -11,6 +11,19 @@
       <%= form.label :subtitle %>
       <%= form.text_field :subtitle, class: 'form-control form-bottom-space' %>
     </div>
+
+    <div class="form_group">
+      <label class="btn btn-primary">
+        Upload main image file <%= form.file_field :main_image, style: "display: none;" %>
+      </label>
+    </div>
+
+    <div class="form_group">
+      <label class="btn btn-primary">
+        Upload thumbnail image file <%= form.file_field :thumbnail, style: "display: none;" %>
+      </label>
+    </div>
+
   </div>
   <div class="col-md-6">
     <div class="form_group">

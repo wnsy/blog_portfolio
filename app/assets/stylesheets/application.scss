@@ -30,7 +30,6 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
   text-align: center;
 }
 
@@ -44,6 +43,7 @@ body {
 
 .cover-container {
   max-width: 42em;
+  height: 100%;
 }
 
 
@@ -134,7 +134,25 @@ body {
   float: none;
 }
 
-// .app-nav span {
-//   margin-left: 10px;
-//   margin-right: 10px;
-// }
+#background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: 100%;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: image-url('waterfront.jpg') no-repeat;
+  background-size: cover;
+}
+
+.cover-heading, .lead {
+  color: black;
+}
+
+.app-footer {
+  color: white;
+}
